@@ -1,0 +1,873 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03DA9DDC2C0B887FD24C1149 /* Pods_SynologyMusic_SynologyMusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AB01434EFA0490BC49A1D6 /* Pods_SynologyMusic_SynologyMusicUITests.framework */; };
+		78FECD1E28E53CBC00A93B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD1D28E53CBC00A93B56 /* AppDelegate.swift */; };
+		78FECD2028E53CBC00A93B56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD1F28E53CBC00A93B56 /* SceneDelegate.swift */; };
+		78FECD2528E53CBC00A93B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FECD2328E53CBC00A93B56 /* Main.storyboard */; };
+		78FECD2A28E53CBD00A93B56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FECD2828E53CBD00A93B56 /* LaunchScreen.storyboard */; };
+		78FECD3528E53CBD00A93B56 /* SynologyMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD3428E53CBD00A93B56 /* SynologyMusicTests.swift */; };
+		78FECD3F28E53CBD00A93B56 /* SynologyMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD3E28E53CBD00A93B56 /* SynologyMusicUITests.swift */; };
+		78FECD4128E53CBD00A93B56 /* SynologyMusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD4028E53CBD00A93B56 /* SynologyMusicUITestsLaunchTests.swift */; };
+		78FECD5028E5415800A93B56 /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 78FECD4E28E5415800A93B56 /* colors.txt */; };
+		78FECD5128E5415800A93B56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78FECD4F28E5415800A93B56 /* Assets.xcassets */; };
+		78FECD5528E541B200A93B56 /* SMMusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD5428E541B200A93B56 /* SMMusicPlayer.swift */; };
+		78FECD5728E5425200A93B56 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD5628E5425200A93B56 /* Debug.swift */; };
+		78FECD5928E54BC500A93B56 /* SMSynologyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD5828E54BC500A93B56 /* SMSynologyManager.swift */; };
+		78FECD5C28E54C9800A93B56 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD5B28E54C9800A93B56 /* DictionaryExtension.swift */; };
+		78FECD5E28E57D1B00A93B56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD5D28E57D1B00A93B56 /* HomeViewController.swift */; };
+		78FECD6028E57E1800A93B56 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD5F28E57E1800A93B56 /* StoryboardExtension.swift */; };
+		78FECD6328E57E6000A93B56 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD6228E57E6000A93B56 /* PlaylistViewController.swift */; };
+		78FECD6728E57ED600A93B56 /* PlaylistSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD6528E57ED600A93B56 /* PlaylistSongCell.swift */; };
+		78FECD6828E57ED600A93B56 /* PlaylistSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FECD6628E57ED600A93B56 /* PlaylistSongCell.xib */; };
+		78FECD6A28E5865F00A93B56 /* DataSaveKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD6928E5865F00A93B56 /* DataSaveKey.swift */; };
+		78FECD6C28E5878700A93B56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD6B28E5878700A93B56 /* LoginViewController.swift */; };
+		78FECD6E28E5BC7000A93B56 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 78FECD6D28E5BC6F00A93B56 /* swiftgen.yml */; };
+		78FECD7228E5BCF700A93B56 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD7028E5BCF700A93B56 /* Assets.swift */; };
+		78FECD7328E5BCF700A93B56 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD7128E5BCF700A93B56 /* Colors.swift */; };
+		86E63B7C7B9DD0FDBB74D73F /* Pods_SynologyMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3BC35796510D85FB0E6583 /* Pods_SynologyMusic.framework */; };
+		B322766552F34060666C7BC3 /* Pods_SynologyMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE48D2A53167C0A2C723732 /* Pods_SynologyMusicTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78FECD3128E53CBD00A93B56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78FECD1228E53CBC00A93B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78FECD1928E53CBC00A93B56;
+			remoteInfo = SynologyMusic;
+		};
+		78FECD3B28E53CBD00A93B56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78FECD1228E53CBC00A93B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78FECD1928E53CBC00A93B56;
+			remoteInfo = SynologyMusic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D3BC35796510D85FB0E6583 /* Pods_SynologyMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SynologyMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41CA1B75CFBA3E35FE380CC0 /* Pods-SynologyMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynologyMusicTests.debug.xcconfig"; path = "Target Support Files/Pods-SynologyMusicTests/Pods-SynologyMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		457F962D5C0398CE85BF0C63 /* Pods-SynologyMusic-SynologyMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynologyMusic-SynologyMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-SynologyMusic-SynologyMusicUITests/Pods-SynologyMusic-SynologyMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4EE48D2A53167C0A2C723732 /* Pods_SynologyMusicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SynologyMusicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78FECD1A28E53CBC00A93B56 /* SynologyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SynologyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78FECD1D28E53CBC00A93B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78FECD1F28E53CBC00A93B56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		78FECD2428E53CBC00A93B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78FECD2928E53CBD00A93B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78FECD2B28E53CBD00A93B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78FECD3028E53CBD00A93B56 /* SynologyMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynologyMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78FECD3428E53CBD00A93B56 /* SynologyMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynologyMusicTests.swift; sourceTree = "<group>"; };
+		78FECD3A28E53CBD00A93B56 /* SynologyMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynologyMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78FECD3E28E53CBD00A93B56 /* SynologyMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynologyMusicUITests.swift; sourceTree = "<group>"; };
+		78FECD4028E53CBD00A93B56 /* SynologyMusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynologyMusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		78FECD4E28E5415800A93B56 /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colors.txt; sourceTree = "<group>"; };
+		78FECD4F28E5415800A93B56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78FECD5428E541B200A93B56 /* SMMusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMusicPlayer.swift; sourceTree = "<group>"; };
+		78FECD5628E5425200A93B56 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		78FECD5828E54BC500A93B56 /* SMSynologyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSynologyManager.swift; sourceTree = "<group>"; };
+		78FECD5B28E54C9800A93B56 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		78FECD5D28E57D1B00A93B56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		78FECD5F28E57E1800A93B56 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		78FECD6228E57E6000A93B56 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		78FECD6528E57ED600A93B56 /* PlaylistSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongCell.swift; sourceTree = "<group>"; };
+		78FECD6628E57ED600A93B56 /* PlaylistSongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistSongCell.xib; sourceTree = "<group>"; };
+		78FECD6928E5865F00A93B56 /* DataSaveKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSaveKey.swift; sourceTree = "<group>"; };
+		78FECD6B28E5878700A93B56 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		78FECD6D28E5BC6F00A93B56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		78FECD7028E5BCF700A93B56 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		78FECD7128E5BCF700A93B56 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		796D6DA4C7A01CD52D9435BA /* Pods-SynologyMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynologyMusic.release.xcconfig"; path = "Target Support Files/Pods-SynologyMusic/Pods-SynologyMusic.release.xcconfig"; sourceTree = "<group>"; };
+		81AB01434EFA0490BC49A1D6 /* Pods_SynologyMusic_SynologyMusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SynologyMusic_SynologyMusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ACB5DC7658C34A79E428E48 /* Pods-SynologyMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynologyMusic.debug.xcconfig"; path = "Target Support Files/Pods-SynologyMusic/Pods-SynologyMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		A57A9CAC0394D743A16BF10D /* Pods-SynologyMusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynologyMusicTests.release.xcconfig"; path = "Target Support Files/Pods-SynologyMusicTests/Pods-SynologyMusicTests.release.xcconfig"; sourceTree = "<group>"; };
+		E2E77B99C5C5771CAB20C761 /* Pods-SynologyMusic-SynologyMusicUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynologyMusic-SynologyMusicUITests.release.xcconfig"; path = "Target Support Files/Pods-SynologyMusic-SynologyMusicUITests/Pods-SynologyMusic-SynologyMusicUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78FECD1728E53CBC00A93B56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86E63B7C7B9DD0FDBB74D73F /* Pods_SynologyMusic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78FECD2D28E53CBD00A93B56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B322766552F34060666C7BC3 /* Pods_SynologyMusicTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78FECD3728E53CBD00A93B56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DA9DDC2C0B887FD24C1149 /* Pods_SynologyMusic_SynologyMusicUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78FECD1128E53CBC00A93B56 = {
+			isa = PBXGroup;
+			children = (
+				78FECD1C28E53CBC00A93B56 /* SynologyMusic */,
+				78FECD3328E53CBD00A93B56 /* SynologyMusicTests */,
+				78FECD3D28E53CBD00A93B56 /* SynologyMusicUITests */,
+				78FECD1B28E53CBC00A93B56 /* Products */,
+				F122C731F5D96A0AC3EC155B /* Pods */,
+				E0A56C945202DA63A1AD115F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78FECD1B28E53CBC00A93B56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD1A28E53CBC00A93B56 /* SynologyMusic.app */,
+				78FECD3028E53CBD00A93B56 /* SynologyMusicTests.xctest */,
+				78FECD3A28E53CBD00A93B56 /* SynologyMusicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78FECD1C28E53CBC00A93B56 /* SynologyMusic */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD6F28E5BCDE00A93B56 /* Generated */,
+				78FECD5A28E54C7F00A93B56 /* Extension */,
+				78FECD5328E5418700A93B56 /* Component */,
+				78FECD5228E5417900A93B56 /* Controller */,
+				78FECD4D28E5415800A93B56 /* Resources */,
+				78FECD1D28E53CBC00A93B56 /* AppDelegate.swift */,
+				78FECD1F28E53CBC00A93B56 /* SceneDelegate.swift */,
+				78FECD2328E53CBC00A93B56 /* Main.storyboard */,
+				78FECD2828E53CBD00A93B56 /* LaunchScreen.storyboard */,
+				78FECD2B28E53CBD00A93B56 /* Info.plist */,
+				78FECD6D28E5BC6F00A93B56 /* swiftgen.yml */,
+			);
+			path = SynologyMusic;
+			sourceTree = "<group>";
+		};
+		78FECD3328E53CBD00A93B56 /* SynologyMusicTests */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD3428E53CBD00A93B56 /* SynologyMusicTests.swift */,
+			);
+			path = SynologyMusicTests;
+			sourceTree = "<group>";
+		};
+		78FECD3D28E53CBD00A93B56 /* SynologyMusicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD3E28E53CBD00A93B56 /* SynologyMusicUITests.swift */,
+				78FECD4028E53CBD00A93B56 /* SynologyMusicUITestsLaunchTests.swift */,
+			);
+			path = SynologyMusicUITests;
+			sourceTree = "<group>";
+		};
+		78FECD4D28E5415800A93B56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD4E28E5415800A93B56 /* colors.txt */,
+				78FECD4F28E5415800A93B56 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		78FECD5228E5417900A93B56 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD6128E57E4600A93B56 /* Playlist */,
+				78FECD5D28E57D1B00A93B56 /* HomeViewController.swift */,
+				78FECD6B28E5878700A93B56 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		78FECD5328E5418700A93B56 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD5428E541B200A93B56 /* SMMusicPlayer.swift */,
+				78FECD5628E5425200A93B56 /* Debug.swift */,
+				78FECD5828E54BC500A93B56 /* SMSynologyManager.swift */,
+				78FECD6928E5865F00A93B56 /* DataSaveKey.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		78FECD5A28E54C7F00A93B56 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD5B28E54C9800A93B56 /* DictionaryExtension.swift */,
+				78FECD5F28E57E1800A93B56 /* StoryboardExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		78FECD6128E57E4600A93B56 /* Playlist */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD6428E57E7100A93B56 /* Cell */,
+				78FECD6228E57E6000A93B56 /* PlaylistViewController.swift */,
+			);
+			path = Playlist;
+			sourceTree = "<group>";
+		};
+		78FECD6428E57E7100A93B56 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD6528E57ED600A93B56 /* PlaylistSongCell.swift */,
+				78FECD6628E57ED600A93B56 /* PlaylistSongCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		78FECD6F28E5BCDE00A93B56 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD7028E5BCF700A93B56 /* Assets.swift */,
+				78FECD7128E5BCF700A93B56 /* Colors.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		E0A56C945202DA63A1AD115F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D3BC35796510D85FB0E6583 /* Pods_SynologyMusic.framework */,
+				81AB01434EFA0490BC49A1D6 /* Pods_SynologyMusic_SynologyMusicUITests.framework */,
+				4EE48D2A53167C0A2C723732 /* Pods_SynologyMusicTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F122C731F5D96A0AC3EC155B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB5DC7658C34A79E428E48 /* Pods-SynologyMusic.debug.xcconfig */,
+				796D6DA4C7A01CD52D9435BA /* Pods-SynologyMusic.release.xcconfig */,
+				457F962D5C0398CE85BF0C63 /* Pods-SynologyMusic-SynologyMusicUITests.debug.xcconfig */,
+				E2E77B99C5C5771CAB20C761 /* Pods-SynologyMusic-SynologyMusicUITests.release.xcconfig */,
+				41CA1B75CFBA3E35FE380CC0 /* Pods-SynologyMusicTests.debug.xcconfig */,
+				A57A9CAC0394D743A16BF10D /* Pods-SynologyMusicTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78FECD1928E53CBC00A93B56 /* SynologyMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78FECD4428E53CBD00A93B56 /* Build configuration list for PBXNativeTarget "SynologyMusic" */;
+			buildPhases = (
+				EA694B2EE6555EC89E73D425 /* [CP] Check Pods Manifest.lock */,
+				78FECD1628E53CBC00A93B56 /* Sources */,
+				78FECD1728E53CBC00A93B56 /* Frameworks */,
+				78FECD1828E53CBC00A93B56 /* Resources */,
+				8D233CDBCB541E2BFA17F4A2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SynologyMusic;
+			productName = SynologyMusic;
+			productReference = 78FECD1A28E53CBC00A93B56 /* SynologyMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78FECD2F28E53CBD00A93B56 /* SynologyMusicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78FECD4728E53CBD00A93B56 /* Build configuration list for PBXNativeTarget "SynologyMusicTests" */;
+			buildPhases = (
+				B0925C5FD82EAD3DA5FDD3B2 /* [CP] Check Pods Manifest.lock */,
+				78FECD2C28E53CBD00A93B56 /* Sources */,
+				78FECD2D28E53CBD00A93B56 /* Frameworks */,
+				78FECD2E28E53CBD00A93B56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78FECD3228E53CBD00A93B56 /* PBXTargetDependency */,
+			);
+			name = SynologyMusicTests;
+			productName = SynologyMusicTests;
+			productReference = 78FECD3028E53CBD00A93B56 /* SynologyMusicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		78FECD3928E53CBD00A93B56 /* SynologyMusicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78FECD4A28E53CBD00A93B56 /* Build configuration list for PBXNativeTarget "SynologyMusicUITests" */;
+			buildPhases = (
+				0C77D1E7E8381552C5D09530 /* [CP] Check Pods Manifest.lock */,
+				78FECD3628E53CBD00A93B56 /* Sources */,
+				78FECD3728E53CBD00A93B56 /* Frameworks */,
+				78FECD3828E53CBD00A93B56 /* Resources */,
+				1BBFD8CE17D8A29BA0AC91FD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78FECD3C28E53CBD00A93B56 /* PBXTargetDependency */,
+			);
+			name = SynologyMusicUITests;
+			productName = SynologyMusicUITests;
+			productReference = 78FECD3A28E53CBD00A93B56 /* SynologyMusicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78FECD1228E53CBC00A93B56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					78FECD1928E53CBC00A93B56 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					78FECD2F28E53CBD00A93B56 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 78FECD1928E53CBC00A93B56;
+					};
+					78FECD3928E53CBD00A93B56 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 78FECD1928E53CBC00A93B56;
+					};
+				};
+			};
+			buildConfigurationList = 78FECD1528E53CBC00A93B56 /* Build configuration list for PBXProject "SynologyMusic" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78FECD1128E53CBC00A93B56;
+			productRefGroup = 78FECD1B28E53CBC00A93B56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78FECD1928E53CBC00A93B56 /* SynologyMusic */,
+				78FECD2F28E53CBD00A93B56 /* SynologyMusicTests */,
+				78FECD3928E53CBD00A93B56 /* SynologyMusicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78FECD1828E53CBC00A93B56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FECD2A28E53CBD00A93B56 /* LaunchScreen.storyboard in Resources */,
+				78FECD5028E5415800A93B56 /* colors.txt in Resources */,
+				78FECD2528E53CBC00A93B56 /* Main.storyboard in Resources */,
+				78FECD5128E5415800A93B56 /* Assets.xcassets in Resources */,
+				78FECD6828E57ED600A93B56 /* PlaylistSongCell.xib in Resources */,
+				78FECD6E28E5BC7000A93B56 /* swiftgen.yml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78FECD2E28E53CBD00A93B56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78FECD3828E53CBD00A93B56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C77D1E7E8381552C5D09530 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SynologyMusic-SynologyMusicUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BBFD8CE17D8A29BA0AC91FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SynologyMusic-SynologyMusicUITests/Pods-SynologyMusic-SynologyMusicUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SynologyMusic-SynologyMusicUITests/Pods-SynologyMusic-SynologyMusicUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SynologyMusic-SynologyMusicUITests/Pods-SynologyMusic-SynologyMusicUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D233CDBCB541E2BFA17F4A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SynologyMusic/Pods-SynologyMusic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SynologyMusic/Pods-SynologyMusic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SynologyMusic/Pods-SynologyMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0925C5FD82EAD3DA5FDD3B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SynologyMusicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA694B2EE6555EC89E73D425 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SynologyMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78FECD1628E53CBC00A93B56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FECD6C28E5878700A93B56 /* LoginViewController.swift in Sources */,
+				78FECD5528E541B200A93B56 /* SMMusicPlayer.swift in Sources */,
+				78FECD5728E5425200A93B56 /* Debug.swift in Sources */,
+				78FECD7328E5BCF700A93B56 /* Colors.swift in Sources */,
+				78FECD6028E57E1800A93B56 /* StoryboardExtension.swift in Sources */,
+				78FECD5E28E57D1B00A93B56 /* HomeViewController.swift in Sources */,
+				78FECD5928E54BC500A93B56 /* SMSynologyManager.swift in Sources */,
+				78FECD6328E57E6000A93B56 /* PlaylistViewController.swift in Sources */,
+				78FECD6728E57ED600A93B56 /* PlaylistSongCell.swift in Sources */,
+				78FECD7228E5BCF700A93B56 /* Assets.swift in Sources */,
+				78FECD1E28E53CBC00A93B56 /* AppDelegate.swift in Sources */,
+				78FECD5C28E54C9800A93B56 /* DictionaryExtension.swift in Sources */,
+				78FECD2028E53CBC00A93B56 /* SceneDelegate.swift in Sources */,
+				78FECD6A28E5865F00A93B56 /* DataSaveKey.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78FECD2C28E53CBD00A93B56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FECD3528E53CBD00A93B56 /* SynologyMusicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78FECD3628E53CBD00A93B56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FECD4128E53CBD00A93B56 /* SynologyMusicUITestsLaunchTests.swift in Sources */,
+				78FECD3F28E53CBD00A93B56 /* SynologyMusicUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78FECD3228E53CBD00A93B56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78FECD1928E53CBC00A93B56 /* SynologyMusic */;
+			targetProxy = 78FECD3128E53CBD00A93B56 /* PBXContainerItemProxy */;
+		};
+		78FECD3C28E53CBD00A93B56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78FECD1928E53CBC00A93B56 /* SynologyMusic */;
+			targetProxy = 78FECD3B28E53CBD00A93B56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78FECD2328E53CBC00A93B56 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78FECD2428E53CBC00A93B56 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		78FECD2828E53CBD00A93B56 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78FECD2928E53CBD00A93B56 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78FECD4228E53CBD00A93B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78FECD4328E53CBD00A93B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78FECD4528E53CBD00A93B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ACB5DC7658C34A79E428E48 /* Pods-SynologyMusic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XE29A28U6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SynologyMusic/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = live.czb1n.SynologyMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78FECD4628E53CBD00A93B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 796D6DA4C7A01CD52D9435BA /* Pods-SynologyMusic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XE29A28U6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SynologyMusic/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = live.czb1n.SynologyMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		78FECD4828E53CBD00A93B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CA1B75CFBA3E35FE380CC0 /* Pods-SynologyMusicTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XE29A28U6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = live.czb1n.SynologyMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SynologyMusic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SynologyMusic";
+			};
+			name = Debug;
+		};
+		78FECD4928E53CBD00A93B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A57A9CAC0394D743A16BF10D /* Pods-SynologyMusicTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XE29A28U6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = live.czb1n.SynologyMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SynologyMusic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SynologyMusic";
+			};
+			name = Release;
+		};
+		78FECD4B28E53CBD00A93B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 457F962D5C0398CE85BF0C63 /* Pods-SynologyMusic-SynologyMusicUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XE29A28U6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = live.czb1n.SynologyMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SynologyMusic;
+			};
+			name = Debug;
+		};
+		78FECD4C28E53CBD00A93B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2E77B99C5C5771CAB20C761 /* Pods-SynologyMusic-SynologyMusicUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XE29A28U6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = live.czb1n.SynologyMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SynologyMusic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78FECD1528E53CBC00A93B56 /* Build configuration list for PBXProject "SynologyMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78FECD4228E53CBD00A93B56 /* Debug */,
+				78FECD4328E53CBD00A93B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78FECD4428E53CBD00A93B56 /* Build configuration list for PBXNativeTarget "SynologyMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78FECD4528E53CBD00A93B56 /* Debug */,
+				78FECD4628E53CBD00A93B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78FECD4728E53CBD00A93B56 /* Build configuration list for PBXNativeTarget "SynologyMusicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78FECD4828E53CBD00A93B56 /* Debug */,
+				78FECD4928E53CBD00A93B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78FECD4A28E53CBD00A93B56 /* Build configuration list for PBXNativeTarget "SynologyMusicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78FECD4B28E53CBD00A93B56 /* Debug */,
+				78FECD4C28E53CBD00A93B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78FECD1228E53CBC00A93B56 /* Project object */;
+}

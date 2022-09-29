@@ -1,0 +1,12 @@
+colors:
+  inputs: Resources/colors.txt
+  outputs:
+    templateName: swift5
+    output: Generated/Colors.swift
+      
+xcassets:
+  inputs:
+    - Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: Generated/Assets.swift
