@@ -1,0 +1,57 @@
+PODS:
+  - Alamofire (5.6.2)
+  - EachNavigationBar (1.16.1)
+  - Reusable (4.1.2):
+    - Reusable/Storyboard (= 4.1.2)
+    - Reusable/View (= 4.1.2)
+  - Reusable/Storyboard (4.1.2)
+  - Reusable/View (4.1.2)
+  - RxAlamofire (6.1.1):
+    - RxAlamofire/Core (= 6.1.1)
+  - RxAlamofire/Core (6.1.1):
+    - Alamofire (~> 5.4)
+    - RxSwift (~> 6.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SwiftGen (6.6.2)
+  - SwiftHEXColors (1.4.1)
+
+DEPENDENCIES:
+  - EachNavigationBar (~> 1.16.1)
+  - Reusable (~> 4.1.2)
+  - RxAlamofire (~> 6.1.1)
+  - RxCocoa (= 6.5.0)
+  - RxSwift (= 6.5.0)
+  - SwiftGen (~> 6.0)
+  - SwiftHEXColors (~> 1.4.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - EachNavigationBar
+    - Reusable
+    - RxAlamofire
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftGen
+    - SwiftHEXColors
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  EachNavigationBar: c72c02b22bcc84ae999f0c86ae7cd83dc88c0ee4
+  Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
+  RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
+  SwiftHEXColors: 1cb6e5d55c52749aa33db8f088ac55eb71ca4c7f
+
+PODFILE CHECKSUM: f94899ea4ec5569ad8d71e3ec162a761bdfcd780
+
+COCOAPODS: 1.11.3

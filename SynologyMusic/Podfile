@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SynologyMusic' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
+  pod 'Reusable', '~> 4.1.2'
+  pod 'RxAlamofire', '~> 6.1.1'
+  pod 'EachNavigationBar', '~> 1.16.1'
+  pod 'SwiftHEXColors', '~> 1.4.1'
+  pod 'SwiftGen', '~> 6.0'
+
+  # Pods for SynologyMusic
+
+  target 'SynologyMusicTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SynologyMusicUITests' do
+    # Pods for testing
+  end
+
+end
