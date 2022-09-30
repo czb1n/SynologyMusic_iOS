@@ -63,18 +63,47 @@ class SMMusicPlayer: AVQueuePlayer {
                 self.playNextSong()
             })
             .disposed(by: self.disposeBag)
+
+//        NotificationCenter.default.rx
+//            .notification(AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
+//            .subscribe { [unowned self] event in
+//                Debug.log("interruption notification")
+//                guard let info = event.userInfo,
+//                      let typeValue = info[AVAudioSessionInterruptionTypeKey] as? UInt,
+//                      let type = AVAudioSession.InterruptionType(rawValue: typeValue)
+//                else {
+//                    return
+//                }
+//                if type == .began {
+//                    // Interruption began, take appropriate actions (save state, update user interface)
+//                } else if type == .ended {
+//                    guard let optionsValue =
+//                        info[AVAudioSessionInterruptionOptionKey] as? UInt
+//                    else {
+//                        return
+//                    }
+//                    let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
+//                    if options.contains(.shouldResume) {
+//                        // Interruption Ended - playback should resume
+//                        Debug.log("interruption end, play again")
+//                    }
+//                }
+//            }
+//            .disposed(by: self.disposeBag)
     }
 
     var playing: Bool = false {
         didSet {
-            playingPublish.onNext(playing)
+            self.playingPublish.onNext(self.playing)
         }
     }
+
     var preSong: Song?
     var currentSong: Song?
     var currentSongId: String {
         self.currentSong?.id ?? ""
     }
+
     var lastPlaySongId: String? {
         get {
             UserDefaults.standard.string(forKey: DataSaveKey.lastPlaySongId.rawValue)
@@ -83,6 +112,7 @@ class SMMusicPlayer: AVQueuePlayer {
             UserDefaults.standard.set(newValue, forKey: DataSaveKey.lastPlaySongId.rawValue)
         }
     }
+
     var disposeBag = DisposeBag()
     var playlist: [Song] = []
     var playMode: PlayMode = .random
