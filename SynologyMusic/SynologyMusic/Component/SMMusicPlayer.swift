@@ -43,7 +43,7 @@ struct Song {
     var url: URL
 }
 
-class SMMusicPlayer: AVQueuePlayer {
+class SMMusicPlayer: AVPlayer {
     static let shared = SMMusicPlayer()
 
     override init() {
@@ -123,6 +123,7 @@ class SMMusicPlayer: AVQueuePlayer {
     func updateArtwork() {
         SMSynologyManager.shared.getSongArtwork(id: self.currentSongId) { [unowned self] artwork in
             self.currentSong?.artwork = artwork
+            self.setNowPlayingInfoArtwork()
             self.songInfoChangePublish.onNext(self.currentSong!)
         }
     }
@@ -131,7 +132,7 @@ class SMMusicPlayer: AVQueuePlayer {
         SMSynologyManager.shared.getSongLyrics(id: self.currentSongId) { [unowned self] lyric in
             self.currentSong?.lyric = []
             self.currentSong?.originalLyric = lyric ?? ""
-            self.currentSong?.originalLyric.split(separator: "\n").forEach { [unowned self] sub in
+            self.currentSong?.originalLyric.replacingOccurrences(of: "\r\n", with: "\n").split(separator: "\n").forEach { [unowned self] sub in
                 let str = String(sub)
                 guard let _ = str.range(of: "\\[\\d+:\\d+\\.\\d+\\].*", options: .regularExpression) else {
                     return
@@ -143,25 +144,24 @@ class SMMusicPlayer: AVQueuePlayer {
     }
 
     func playSong(_ song: Song) {
+        Debug.log("play song \(song.title)")
         self.preSong = self.currentSong
         self.currentSong = song
         self.lastPlaySongId = song.id
-        let item = AVPlayerItem(asset: AVURLAsset(url: self.currentSong!.url, options: [AVURLAssetHTTPCookiesKey: HTTPCookieStorage.shared.cookies!]))
-        self.replaceCurrentItem(with: item)
+        let item = AVPlayerItem(asset: AVURLAsset(url: song.url, options: [AVURLAssetHTTPCookiesKey: HTTPCookieStorage.shared.cookies!]))
         self.updateLyric()
         self.updateArtwork()
+        self.replaceCurrentItem(with: item)
+        self.songChangePublish.onNext(self.currentSong!)
         self.currentItem?.rx
             .observeWeakly(Int.self, "status")
             .subscribe { [unowned self] value in
+                Debug.log("player item status = \(value)")
                 if value.element == 1 {
-                    Debug.log("player item ready to play")
-                    self.songChangePublish.onNext(self.currentSong!)
                     self.setNowPlayingStatisicInfo()
                     if self.playing {
                         self.play()
                     }
-                } else if value.element == 2 {
-                    Debug.log("player item error \(self.currentItem?.error.debugDescription ?? "")")
                 }
             }
             .disposed(by: self.disposeBag)
@@ -219,8 +219,7 @@ class SMMusicPlayer: AVQueuePlayer {
         MPRemoteCommandCenter.shared().pauseCommand.removeTarget(nil)
         MPRemoteCommandCenter.shared().nextTrackCommand.removeTarget(nil)
         MPRemoteCommandCenter.shared().previousTrackCommand.removeTarget(nil)
-        MPRemoteCommandCenter.shared().seekForwardCommand.removeTarget(nil)
-        MPRemoteCommandCenter.shared().seekBackwardCommand.removeTarget(nil)
+        MPRemoteCommandCenter.shared().changePlaybackPositionCommand.removeTarget(nil)
     }
 
     func setRemoteCommand() {
@@ -236,20 +235,20 @@ class SMMusicPlayer: AVQueuePlayer {
         MPRemoteCommandCenter.shared().pauseCommand.addTarget { _ in
             .success
         }
-        MPRemoteCommandCenter.shared().seekForwardCommand.addTarget { _ in
-            .success
-        }
-        MPRemoteCommandCenter.shared().seekBackwardCommand.addTarget { _ in
-            .success
+        MPRemoteCommandCenter.shared().changePlaybackPositionCommand.addTarget { [unowned self] e in
+            guard let event = (e as? MPChangePlaybackPositionCommandEvent) else {
+                return .commandFailed
+            }
+            Debug.log(event.positionTime)
+            self.seek(to: CMTime(seconds: event.positionTime, preferredTimescale: CMTimeScale(1000))) { _ in
+            }
+            return .success
         }
     }
 
-    func setNowPlayingInfoArtwork(_ lyric: String) {
+    func setNowPlayingInfoArtwork() {
         let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
         var nowPlayingInfo = nowPlayingInfoCenter.nowPlayingInfo ?? [String: Any]()
-        if lyric.isEmpty || lyric == (nowPlayingInfo[MPMediaItemPropertyTitle] as? String ?? "") {
-            return
-        }
 
         if self.currentSong?.artwork != nil {
             nowPlayingInfo[MPMediaItemPropertyArtwork] = MPMediaItemArtwork(boundsSize: self.currentSong!.artwork!.size, requestHandler: { _ in self.currentSong!.artwork! })

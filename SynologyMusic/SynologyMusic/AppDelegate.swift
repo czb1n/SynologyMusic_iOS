@@ -63,10 +63,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case .remoteControlPreviousTrack:
             Debug.log("remote control pre")
             SMMusicPlayer.shared.playPreSong()
-        case .remoteControlEndSeekingForward:
-            Debug.log("remote control forward")
-        case .remoteControlEndSeekingBackward:
-            Debug.log("remote control backward")
         default:
             break
         }
