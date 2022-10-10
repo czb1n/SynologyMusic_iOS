@@ -11,6 +11,7 @@ target 'SynologyMusic' do
   pod 'EachNavigationBar', '~> 1.16.1'
   pod 'SwiftHEXColors', '~> 1.4.1'
   pod 'SwiftGen', '~> 6.0'
+  pod 'Toast-Swift', '~> 5.0.1'
 
   # Pods for SynologyMusic
 

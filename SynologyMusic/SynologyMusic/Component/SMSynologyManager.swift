@@ -15,7 +15,6 @@ class SMSynologyManager {
 
     static let shared = SMSynologyManager(
         host: UserDefaults.standard.string(forKey: DataSaveKey.synologyHost.rawValue) ?? "",
-        port: UserDefaults.standard.integer(forKey: DataSaveKey.synologyPort.rawValue),
         account: UserDefaults.standard.string(forKey: DataSaveKey.synologyAccount.rawValue) ?? "",
         password: UserDefaults.standard.string(forKey: DataSaveKey.synologyPassword.rawValue) ?? ""
     )
@@ -23,12 +22,6 @@ class SMSynologyManager {
     var host: String {
         didSet {
             UserDefaults.standard.set(host, forKey: DataSaveKey.synologyHost.rawValue)
-        }
-    }
-
-    var port: Int {
-        didSet {
-            UserDefaults.standard.set(port, forKey: DataSaveKey.synologyPort.rawValue)
         }
     }
 
@@ -53,19 +46,19 @@ class SMSynologyManager {
     let disposeBag: DisposeBag = .init()
 
     var requestHost: String {
-        if port <= 0 {
+        if host.hasPrefix("http") {
             return host
+        } else {
+            return "http://\(host)"
         }
-        return "\(host):\(port)"
     }
 
     var requestHeader: HTTPHeaders {
         return HTTPHeaders(["Cookie": "id=\(sid)", "X-SYNO-TOKEN": synotoken])
     }
 
-    init(host: String, port: Int, account: String, password: String) {
+    init(host: String, account: String, password: String) {
         self.host = host
-        self.port = port
         self.account = account
         self.password = password
     }
@@ -150,7 +143,6 @@ class SMSynologyManager {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [unowned self] data in
                 let json = data.toDictionary()
-//                Debug.log("get synology songs success response : \(json)")
                 let songs: [Song] = json.dic("data").dicArray("songs").map { [unowned self] song in
                     Song(
                         id: song.str("id"),

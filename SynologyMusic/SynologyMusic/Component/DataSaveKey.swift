@@ -7,7 +7,6 @@
 
 enum DataSaveKey: String {
     case synologyHost
-    case synologyPort
     case synologyAccount
     case synologyPassword
     case lastPlaySongId

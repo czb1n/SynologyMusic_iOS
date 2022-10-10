@@ -9,6 +9,7 @@ import MediaPlayer
 import RxCocoa
 import RxSwift
 import UIKit
+import Toast_Swift
 
 class HomeViewController: UIViewController {
     var disposeBag = DisposeBag()
@@ -89,8 +90,10 @@ class HomeViewController: UIViewController {
         SMSynologyManager.shared.login { [unowned self] success in
             if success {
                 Debug.log("login success")
+                self.view.makeToast("登录成功", position: .center)
             } else {
                 let vc = LoginViewController.instantiate()
+                vc.view.makeToast("请先登录", position: .center)
                 self.present(vc, animated: true)
             }
         }

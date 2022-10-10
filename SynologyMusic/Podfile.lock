@@ -19,6 +19,7 @@ PODS:
   - RxSwift (6.5.0)
   - SwiftGen (6.6.2)
   - SwiftHEXColors (1.4.1)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - EachNavigationBar (~> 1.16.1)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - RxSwift (= 6.5.0)
   - SwiftGen (~> 6.0)
   - SwiftHEXColors (~> 1.4.1)
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
@@ -40,6 +42,7 @@ SPEC REPOS:
     - RxSwift
     - SwiftGen
     - SwiftHEXColors
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
@@ -51,7 +54,8 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
   SwiftHEXColors: 1cb6e5d55c52749aa33db8f088ac55eb71ca4c7f
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: f94899ea4ec5569ad8d71e3ec162a761bdfcd780
+PODFILE CHECKSUM: b65238bfbb738ed2ccfcc42271929781f77c35b6
 
 COCOAPODS: 1.11.3
