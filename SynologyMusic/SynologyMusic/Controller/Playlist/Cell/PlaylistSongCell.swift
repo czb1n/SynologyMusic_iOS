@@ -10,8 +10,8 @@ import Reusable
 
 class PlaylistSongCell: UITableViewCell, NibReusable {
     
-    @IBOutlet var no: UILabel!
-    @IBOutlet var title: UILabel!
+    @IBOutlet var noLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

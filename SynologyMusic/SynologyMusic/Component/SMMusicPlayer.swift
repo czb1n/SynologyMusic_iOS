@@ -50,10 +50,17 @@ class SMMusicPlayer: AVPlayer {
         super.init()
 
         self.addPeriodicTimeObserver(forInterval: CMTimeMake(value: 1, timescale: 10), queue: .main) { [unowned self] time in
-            let words = self.currentSong?.lyric.last(where: { words in
+            let wordIndex = self.currentSong?.lyric.lastIndex(where: { words in
                 time.seconds >= Double(words.time / 1000)
             })
-            self.setNowPlayingInfoLyric(words?.content ?? "")
+            guard let index = wordIndex else {
+                return
+            }
+            if self.currentLyricIndex != index {
+                self.currentLyricIndex = index
+                self.setNowPlayingInfoLyric(self.currentSong?.lyric[index].content ?? "")
+                self.songLyricIndexChangePublish.onNext(index)
+            }
         }
 
         NotificationCenter.default.rx
@@ -103,6 +110,7 @@ class SMMusicPlayer: AVPlayer {
     var currentSongId: String {
         self.currentSong?.id ?? ""
     }
+    var currentLyricIndex: Int?
 
     var lastPlaySongId: String? {
         get {
@@ -118,6 +126,7 @@ class SMMusicPlayer: AVPlayer {
     var playMode: PlayMode = .random
     var songChangePublish: PublishSubject<Song> = .init()
     var songInfoChangePublish: PublishSubject<Song> = .init()
+    var songLyricIndexChangePublish: PublishSubject<Int> = .init()
     var playingPublish: PublishSubject<Bool> = .init()
 
     func updateArtwork() {
@@ -137,7 +146,10 @@ class SMMusicPlayer: AVPlayer {
                 guard let _ = str.range(of: "\\[\\d+:\\d+\\.\\d+\\].*", options: .regularExpression) else {
                     return
                 }
-                self.currentSong?.lyric.append(SongWords(original: str))
+                let words = SongWords(original: str)
+                if !words.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    self.currentSong?.lyric.append(words)
+                }
             }
             self.songInfoChangePublish.onNext(self.currentSong!)
         }

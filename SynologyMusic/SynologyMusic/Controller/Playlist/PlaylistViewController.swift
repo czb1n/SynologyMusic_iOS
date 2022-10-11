@@ -32,8 +32,8 @@ extension PlaylistViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: PlaylistSongCell.self)
-        cell.title.text = playlist[indexPath.row].title
-        cell.no.text = "\(indexPath.row)"
+        cell.titleLabel.text = self.playlist[indexPath.row].title
+        cell.noLabel.text = "\(indexPath.row)"
         return cell
     }
 }

@@ -8,8 +8,8 @@
 import MediaPlayer
 import RxCocoa
 import RxSwift
-import UIKit
 import Toast_Swift
+import UIKit
 
 class HomeViewController: UIViewController {
     var disposeBag = DisposeBag()
@@ -22,9 +22,15 @@ class HomeViewController: UIViewController {
     @IBOutlet var prePlayButton: UIButton!
     @IBOutlet var nextPlayButton: UIButton!
     @IBOutlet var playlistButton: UIButton!
+    @IBOutlet var lyricTableView: UITableView!
+    
+    var lyrics: [SongWords] = []
+    var primaryIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.lyricTableView.register(cellType: LyricCell.self)
         
         self.playlistButton.rx.tap.subscribe { [unowned self] _ in
             let vc = PlaylistViewController.instantiate()
@@ -63,6 +69,13 @@ class HomeViewController: UIViewController {
             }
         }.disposed(by: self.disposeBag)
         
+        SMMusicPlayer.shared.songLyricIndexChangePublish.subscribe { [unowned self] e in
+            let index = e.element ?? 0
+            self.primaryIndex = index
+            self.lyricTableView.reloadData()
+            scrollToLyricIndex(index - 2)
+        }.disposed(by: self.disposeBag)
+        
         SMSynologyManager.shared.loginSuccessPublish.subscribe(onNext: { _ in
             SMSynologyManager.shared.getSongs(offset: 0, limit: 5000) { songs in
                 SMMusicPlayer.shared.playlist = songs
@@ -84,6 +97,15 @@ class HomeViewController: UIViewController {
         self.songArtistLabel.text = song?.artist
         self.artworkImageView.image = song?.artwork
         self.backgroundImageView.image = song?.artwork
+        self.lyrics = song?.lyric ?? []
+        self.lyricTableView.reloadData()
+        self.scrollToLyricIndex(0)
+    }
+    
+    func scrollToLyricIndex(_ index: Int) {
+        if index >= 0, self.lyrics.count > index {
+            self.lyricTableView.scrollToRow(at: .init(row: index, section: 0), at: .top, animated: true)
+        }
     }
     
     func judgeSynologyLoginState() {
@@ -97,5 +119,35 @@ class HomeViewController: UIViewController {
                 self.present(vc, animated: true)
             }
         }
+    }
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.lyrics.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: LyricCell.self)
+        cell.contentLabel.text = self.lyrics[indexPath.row].content
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == self.primaryIndex {
+            (cell as! LyricCell).toPrimaryStyle()
+        } else if indexPath.row == self.primaryIndex - 1 || indexPath.row == self.primaryIndex + 1 {
+            (cell as! LyricCell).toSecondaryStyle()
+        } else {
+            (cell as! LyricCell).toCommonStyle()
+        }
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30.0
     }
 }

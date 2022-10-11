@@ -1,0 +1,3 @@
+lyric-common-color: #ffffff99
+lyric-secondary-color: #ffffffcc
+lyric-primary-color: #ffffffff

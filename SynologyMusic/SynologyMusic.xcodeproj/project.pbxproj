@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03DA9DDC2C0B887FD24C1149 /* Pods_SynologyMusic_SynologyMusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AB01434EFA0490BC49A1D6 /* Pods_SynologyMusic_SynologyMusicUITests.framework */; };
+		7801D89928F3F2AB00B9F7C0 /* LyricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801D89728F3F2AB00B9F7C0 /* LyricCell.swift */; };
+		7801D89A28F3F2AB00B9F7C0 /* LyricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7801D89828F3F2AB00B9F7C0 /* LyricCell.xib */; };
 		78FECD1E28E53CBC00A93B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD1D28E53CBC00A93B56 /* AppDelegate.swift */; };
 		78FECD2028E53CBC00A93B56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD1F28E53CBC00A93B56 /* SceneDelegate.swift */; };
 		78FECD2528E53CBC00A93B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FECD2328E53CBC00A93B56 /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		41CA1B75CFBA3E35FE380CC0 /* Pods-SynologyMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynologyMusicTests.debug.xcconfig"; path = "Target Support Files/Pods-SynologyMusicTests/Pods-SynologyMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		457F962D5C0398CE85BF0C63 /* Pods-SynologyMusic-SynologyMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynologyMusic-SynologyMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-SynologyMusic-SynologyMusicUITests/Pods-SynologyMusic-SynologyMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4EE48D2A53167C0A2C723732 /* Pods_SynologyMusicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SynologyMusicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7801D89728F3F2AB00B9F7C0 /* LyricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricCell.swift; sourceTree = "<group>"; };
+		7801D89828F3F2AB00B9F7C0 /* LyricCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LyricCell.xib; sourceTree = "<group>"; };
 		78FECD1A28E53CBC00A93B56 /* SynologyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SynologyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FECD1D28E53CBC00A93B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78FECD1F28E53CBC00A93B56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7801D89528F3F22F00B9F7C0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7801D89628F3F23E00B9F7C0 /* Cell */,
+				78FECD5D28E57D1B00A93B56 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7801D89628F3F23E00B9F7C0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7801D89728F3F2AB00B9F7C0 /* LyricCell.swift */,
+				7801D89828F3F2AB00B9F7C0 /* LyricCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		78FECD1128E53CBC00A93B56 = {
 			isa = PBXGroup;
 			children = (
@@ -188,8 +210,8 @@
 		78FECD5228E5417900A93B56 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7801D89528F3F22F00B9F7C0 /* Home */,
 				78FECD6128E57E4600A93B56 /* Playlist */,
-				78FECD5D28E57D1B00A93B56 /* HomeViewController.swift */,
 				78FECD6B28E5878700A93B56 /* LoginViewController.swift */,
 			);
 			path = Controller;
@@ -377,6 +399,7 @@
 				78FECD2A28E53CBD00A93B56 /* LaunchScreen.storyboard in Resources */,
 				78FECD5028E5415800A93B56 /* colors.txt in Resources */,
 				78FECD2528E53CBC00A93B56 /* Main.storyboard in Resources */,
+				7801D89A28F3F2AB00B9F7C0 /* LyricCell.xib in Resources */,
 				78FECD5128E5415800A93B56 /* Assets.xcassets in Resources */,
 				78FECD6828E57ED600A93B56 /* PlaylistSongCell.xib in Resources */,
 				78FECD6E28E5BC7000A93B56 /* swiftgen.yml in Resources */,
@@ -515,6 +538,7 @@
 				78FECD5E28E57D1B00A93B56 /* HomeViewController.swift in Sources */,
 				78FECD5928E54BC500A93B56 /* SMSynologyManager.swift in Sources */,
 				78FECD6328E57E6000A93B56 /* PlaylistViewController.swift in Sources */,
+				7801D89928F3F2AB00B9F7C0 /* LyricCell.swift in Sources */,
 				78FECD6728E57ED600A93B56 /* PlaylistSongCell.swift in Sources */,
 				78FECD7228E5BCF700A93B56 /* Assets.swift in Sources */,
 				78FECD1E28E53CBC00A93B56 /* AppDelegate.swift in Sources */,
