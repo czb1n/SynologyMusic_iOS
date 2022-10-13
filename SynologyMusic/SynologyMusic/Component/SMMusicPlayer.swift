@@ -17,17 +17,33 @@ enum PlayMode {
 }
 
 struct SongWords {
-    var time: TimeInterval
-    var content: String
+    var time: TimeInterval = TimeInterval()
+    var content: String = ""
 
     init(original: String) {
-        let tStrings = String(original.split(separator: "]")[0][1...]).split(separator: ":")
+        let timeContent = original.split(separator: "]")
+        if timeContent.count != 2 {
+            return
+        }
+        self.time = self.processTime(String(timeContent[0]))
+        self.content = String(timeContent[1])
+    }
+    
+    func processTime(_ timeStr: String) -> TimeInterval {
+        let tStrings = timeStr.replacingOccurrences(of: "[", with: "").split(separator: ":")
+        if tStrings.count != 2 {
+            return TimeInterval()
+        }
         let minute = Int64(tStrings[0]) ?? 0
-        let second = Int64(tStrings[1].split(separator: ".")[0]) ?? 0
-        let milli = Int64(tStrings[1].split(separator: ".")[1]) ?? 0
-        self.time = TimeInterval(integerLiteral: minute * 60000 + second * 1000 + milli)
-
-        self.content = original.split(separator: "]").count > 1 ? String(original.split(separator: "]")[1]) : ""
+        
+        let secondStrings = tStrings[1].split(separator: ".")
+        if secondStrings.count != 2 {
+            return TimeInterval()
+        }
+        let second = Int64(secondStrings[0]) ?? 0
+        let milli = Int64(secondStrings[1]) ?? 0
+        
+        return TimeInterval(integerLiteral: minute * 60000 + second * 1000 + milli)
     }
 }
 
