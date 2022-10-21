@@ -11,6 +11,7 @@ import Reusable
 class PlaylistSongCell: UITableViewCell, NibReusable {
     
     @IBOutlet var noLabel: UILabel!
+    @IBOutlet var artistLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
 
     override func awakeFromNib() {

@@ -19,7 +19,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUP-r1-bac">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgf-hq-7ZY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgf-hq-7ZY">
                                 <rect key="frame" x="82" y="96" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="TD8-iW-vqj"/>
@@ -219,9 +219,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ryo-PE-Qzg">
-                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ryo-PE-Qzg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="W4q-y1-mcW" id="A1A-wf-Kec"/>
                                     <outlet property="delegate" destination="W4q-y1-mcW" id="0r1-vB-wPI"/>
@@ -229,10 +230,9 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="htP-6X-FAl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="htP-6X-FAl" firstAttribute="bottom" secondItem="Ryo-PE-Qzg" secondAttribute="bottom" id="9zN-yt-bvo"/>
-                            <constraint firstItem="Ryo-PE-Qzg" firstAttribute="top" secondItem="htP-6X-FAl" secondAttribute="top" id="JdE-H9-JtB"/>
+                            <constraint firstAttribute="bottom" secondItem="Ryo-PE-Qzg" secondAttribute="bottom" id="9zN-yt-bvo"/>
+                            <constraint firstItem="Ryo-PE-Qzg" firstAttribute="top" secondItem="ivD-Tk-c5J" secondAttribute="top" id="JdE-H9-JtB"/>
                             <constraint firstItem="Ryo-PE-Qzg" firstAttribute="leading" secondItem="htP-6X-FAl" secondAttribute="leading" id="Nqw-ze-jEF"/>
                             <constraint firstItem="htP-6X-FAl" firstAttribute="trailing" secondItem="Ryo-PE-Qzg" secondAttribute="trailing" id="QeB-GR-Ikx"/>
                         </constraints>

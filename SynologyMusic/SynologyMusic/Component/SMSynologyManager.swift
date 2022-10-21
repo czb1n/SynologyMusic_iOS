@@ -117,7 +117,7 @@ class SMSynologyManager {
     }
 
     func getSongArtwork(id: String, completionHandler: @escaping (UIImage?) -> Void) {
-        let params = "api=SYNO.AudioStation.Cover&output_default=true&is_hr=false&version=3&library=shared&_dc=\(Date.now.timeIntervalSince1970)&method=getsongcover&view=playing&id=\(id)&SynoToken=\(synotoken)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let params = "api=SYNO.AudioStation.Cover&output_default=false&is_hr=false&version=3&library=shared&_dc=\(Date.now.timeIntervalSince1970)&method=getsongcover&view=playing&id=\(id)&SynoToken=\(synotoken)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         let urlString = "\(requestHost)/webapi/AudioStation/cover.cgi?\(params)"
         guard let url = URL(string: urlString), let req = try? URLRequest(url: url, method: .get, headers: requestHeader) else {
             return
@@ -127,6 +127,8 @@ class SMSynologyManager {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { data in
                 completionHandler(UIImage(data: data))
+            }, onError: { _ in
+                completionHandler(Asset.defaultArtwork.image)
             })
             .disposed(by: disposeBag)
     }

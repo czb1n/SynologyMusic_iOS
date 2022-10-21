@@ -30,6 +30,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        artworkImageView.layer.masksToBounds = true
+        artworkImageView.layer.cornerRadius = 125.0
+        
         self.lyricTableView.register(cellType: LyricCell.self)
         
         self.playlistButton.rx.tap.subscribe { [unowned self] _ in
